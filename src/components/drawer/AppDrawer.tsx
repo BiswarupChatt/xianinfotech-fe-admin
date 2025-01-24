@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function AppDrawer() {
   const menuItems = [
-    { label: "User List", path: "/user-list" },
+    { label: "User List", path: "/" },
     { label: "Transaction List", path: "/trnsaction-list" },
     { label: "Video Management", path: "/video-management" },
     { label: "Top Receivers List", path: "/top-receivers-list" },
