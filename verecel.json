@@ -1,9 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/user-list", "destination": "/" },
-    { "source": "/transaction-list", "destination": "/" },
-    { "source": "/video-management", "destination": "/" },
-    { "source": "/top-receivers-list", "destination": "/" },
-    { "source": "/(.*)", "destination": "/" }
-  ]
-}
