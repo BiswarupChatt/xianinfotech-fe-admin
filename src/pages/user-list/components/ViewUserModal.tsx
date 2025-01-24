@@ -88,7 +88,7 @@ export default function ViewUserModal({
       (async () => {
         try {
           const response = await axios.get(
-            `http://localhost:3000/api/promoter/${selectedUserId}`
+            `https://xianinfotech-be.onrender.com/api/promoter/${selectedUserId}`
           );
 
           setValue("name", response.data.name || "");
