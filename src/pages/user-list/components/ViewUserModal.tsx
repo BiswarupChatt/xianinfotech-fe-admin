@@ -22,7 +22,7 @@ const validationSchema = Yup.object({
     .length(10, "Phone number must be exactly 10 digits")
     .required("Phone number is required"),
   refferedBy: Yup.string().required("Referred By is required"),
-  businessPromoters: Yup.number().required("Business Promoters is required"),
+  businessPromoters: Yup.string().required("Business Promoters is required"),
   businessIncome: Yup.number().required("Business Income is required"),
   status: Yup.string()
     .oneOf(["active", "inactive"], "Invalid status")
@@ -91,7 +91,6 @@ export default function ViewUserModal({
             `http://localhost:3000/api/promoter/${selectedUserId}`
           );
 
-          // Ensure all values are set properly
           setValue("name", response.data.name || "");
           setValue("email", response.data.email || "");
           setValue("phone", response.data.phone || "");

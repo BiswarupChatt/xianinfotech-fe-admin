@@ -14,7 +14,7 @@ const validationSchema = Yup.object({
     .length(10, "Phone number must be exactly 10 digits")
     .required("Phone number is required"),
   refferedBy: Yup.string().required("Referred By is required"),
-  businessPromoters: Yup.number().required("Business Promoters is required"),
+  businessPromoters: Yup.string().required("Business Promoters is required"),
   businessIncome: Yup.number().required("Business Income is required"),
   status: Yup.string()
     .oneOf(["active", "inactive"], "Invalid status")

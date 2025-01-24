@@ -69,13 +69,16 @@ export default function UserListTable() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/api/promoter", {
-          params: {
-            search: searchQuery,
-            page: page + 1,
-            limit: rowsPerPage,
-          },
-        });
+        const response = await axios.get(
+          "http://localhost:3000/api/promoter",
+          {
+            params: {
+              search: searchQuery,
+              page: page + 1,
+              limit: rowsPerPage,
+            },
+          }
+        );
         console.log(response.data);
         setRows(response.data.promoters);
         setTotalCount(response.data.totalCount);
@@ -116,10 +119,12 @@ export default function UserListTable() {
         <Box
           display="flex"
           justifyContent="center"
+          flexDirection="column"
           alignItems="center"
           minHeight="200px"
         >
           <CircularProgress />
+          <Typography variant="h6">It may take sometime to load</Typography>
         </Box>
       ) : (
         <TableContainer component={Paper}>

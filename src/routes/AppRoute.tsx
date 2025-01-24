@@ -1,9 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import UsersList from "../pages/user-list/UsersList";
 
 export default function AppRoute() {
   return (
-    <Routes>
+    <Routes>  
+      <Route path="/" element={<Navigate to="user-list" />} />
       <Route path="/user-list" element={<UsersList />} />
       <Route path="/trnsaction-list" element={<h2>Transaction List</h2>} />
       <Route path="/video-management" element={<h2>Video Management</h2>} />
