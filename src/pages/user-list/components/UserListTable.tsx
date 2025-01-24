@@ -70,7 +70,7 @@ export default function UserListTable() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/promoter",
+          "https://xianinfotech-be.onrender.com/api/promoter",
           {
             params: {
               search: searchQuery,
