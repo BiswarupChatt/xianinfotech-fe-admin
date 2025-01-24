@@ -59,7 +59,7 @@ export default function CreateUserModal({
     (async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/promoter",
+          "https://xianinfotech-be.onrender.com/api/promoter",
           data
         );
         console.log("created", response.data);
