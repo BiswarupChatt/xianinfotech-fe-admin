@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import UsersList from "../pages/user-list/UsersList";
 
 export default function AppRoute() {
